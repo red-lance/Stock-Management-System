@@ -32,8 +32,6 @@ public class MainGUI extends JFrame {
         
         Font font = new Font("Verdana", Font.PLAIN, 20);
                 
-//        JLabel commandLbl = new JLabel("Commands: ");
-//        commandLbl.setFont(font);
         JButton buyButton = new JButton("Buy Investment");
         buyButton.setFont(font);
         JButton sellButton = new JButton("Sell Investment");
@@ -52,12 +50,12 @@ public class MainGUI extends JFrame {
         quitButton.setFont(font);
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.X_AXIS));
-//        topPanel.add(commandLbl);
+        topPanel.add(profileButton);
         topPanel.add(buyButton);
         topPanel.add(sellButton);
         topPanel.add(updateButton);
         topPanel.add(getGainBtn);
-        topPanel.add(profileButton);
+
         topPanel.add(saveAs);
         topPanel.add(loadBtn);
         topPanel.add(quitButton);
@@ -235,26 +233,26 @@ public class MainGUI extends JFrame {
         sellForm.add(sellQuantityFld);
         sellForm.add(sellPriceLbl);
         sellForm.add(sellPriceFld);
-        JPanel sellFormWrapper = new JPanel();
-        sellFormWrapper.setLayout(new BorderLayout());
-        sellFormWrapper.add(sellLbl, BorderLayout.NORTH);
-        sellFormWrapper.add(sellForm, BorderLayout.SOUTH);
-        sellFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
-        JPanel sellPanelRight = new JPanel();
-        sellPanelRight.setLayout(new BorderLayout());
-        JPanel sellPanelButtons = new JPanel();
-        sellPanelButtons.setLayout(new BoxLayout(sellPanelButtons, BoxLayout.Y_AXIS));
-        JButton resetSellBtn = new JButton("Reset");
-        resetSellBtn.setFont(font);
-        JButton sellBtn = new JButton("Sell");
-        sellBtn.setFont(font);
-        sellPanelButtons.add(resetSellBtn);
-        sellPanelButtons.add(sellBtn);
-        sellPanelRight.add(sellPanelButtons, BorderLayout.SOUTH);
-        sellPanel.add(sellFormWrapper);
-        sellPanel.add(sellPanelRight);
-        sellPanelWrapper.add(sellPanel, BorderLayout.NORTH);
-        sellPanelWrapper.add(sellPanelOutput, BorderLayout.CENTER);
+//        JPanel sellFormWrapper = new JPanel();
+//        sellFormWrapper.setLayout(new BorderLayout());
+//        sellFormWrapper.add(sellLbl, BorderLayout.NORTH);
+//        sellFormWrapper.add(sellForm, BorderLayout.SOUTH);
+//        sellFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
+//        JPanel sellPanelRight = new JPanel();
+//        sellPanelRight.setLayout(new BorderLayout());
+//        JPanel sellPanelButtons = new JPanel();
+//        sellPanelButtons.setLayout(new BoxLayout(sellPanelButtons, BoxLayout.Y_AXIS));
+//        JButton resetSellBtn = new JButton("Reset");
+//        resetSellBtn.setFont(font);
+//        JButton sellBtn = new JButton("Sell");
+//        sellBtn.setFont(font);
+//        sellPanelButtons.add(resetSellBtn);
+//        sellPanelButtons.add(sellBtn);
+//        sellPanelRight.add(sellPanelButtons, BorderLayout.SOUTH);
+//        sellPanel.add(sellFormWrapper);
+//        sellPanel.add(sellPanelRight);
+//        sellPanelWrapper.add(sellPanel, BorderLayout.NORTH);
+//        sellPanelWrapper.add(sellPanelOutput, BorderLayout.CENTER);
         
         JPanel updatePanelWrapper = new JPanel();
         updatePanelWrapper.setLayout(new BorderLayout());
@@ -285,29 +283,29 @@ public class MainGUI extends JFrame {
         updateForm.add(updateNameFld);
         updateForm.add(updatePriceLbl);
         updateForm.add(updatePriceFld);
-        JPanel updateFormWrapper = new JPanel();
-        updateFormWrapper.setLayout(new BorderLayout());
-        updateFormWrapper.add(updateLbl, BorderLayout.NORTH);
-        updateFormWrapper.add(updateForm, BorderLayout.SOUTH);
-        updateFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
-        JPanel updatePanelRight = new JPanel();
-        updatePanelRight.setLayout(new BorderLayout());
-        JPanel updatePanelButtons = new JPanel();
-        updatePanelButtons.setLayout(new BoxLayout(updatePanelButtons, BoxLayout.Y_AXIS));
-        JButton prevButton = new JButton("Prev");
-        prevButton.setFont(font);
-        JButton nextButton = new JButton("Next");
-        nextButton.setFont(font);
-        JButton updateSaveButton = new JButton("Save");
-        updateSaveButton.setFont(font);
-        updatePanelButtons.add(prevButton);
-        updatePanelButtons.add(nextButton);
-        updatePanelButtons.add(updateSaveButton);
-        updatePanelRight.add(updatePanelButtons, BorderLayout.SOUTH);
-        updatePanel.add(updateFormWrapper);
-        updatePanel.add(updatePanelRight);
-        updatePanelWrapper.add(updatePanel, BorderLayout.NORTH);
-        updatePanelWrapper.add(updatePanelOutput, BorderLayout.CENTER);
+//        JPanel updateFormWrapper = new JPanel();
+//        updateFormWrapper.setLayout(new BorderLayout());
+//        updateFormWrapper.add(updateLbl, BorderLayout.NORTH);
+//        updateFormWrapper.add(updateForm, BorderLayout.SOUTH);
+//        updateFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
+//        JPanel updatePanelRight = new JPanel();
+//        updatePanelRight.setLayout(new BorderLayout());
+//        JPanel updatePanelButtons = new JPanel();
+//        updatePanelButtons.setLayout(new BoxLayout(updatePanelButtons, BoxLayout.Y_AXIS));
+//        JButton prevButton = new JButton("Prev");
+//        prevButton.setFont(font);
+//        JButton nextButton = new JButton("Next");
+//        nextButton.setFont(font);
+//        JButton updateSaveButton = new JButton("Save");
+//        updateSaveButton.setFont(font);
+//        updatePanelButtons.add(prevButton);
+//        updatePanelButtons.add(nextButton);
+//        updatePanelButtons.add(updateSaveButton);
+//        updatePanelRight.add(updatePanelButtons, BorderLayout.SOUTH);
+//        updatePanel.add(updateFormWrapper);
+//        updatePanel.add(updatePanelRight);
+//        updatePanelWrapper.add(updatePanel, BorderLayout.NORTH);
+//        updatePanelWrapper.add(updatePanelOutput, BorderLayout.CENTER);
         
         JPanel getGainPanelWrapper = new JPanel();
         getGainPanelWrapper.setLayout(new BorderLayout());
@@ -319,19 +317,19 @@ public class MainGUI extends JFrame {
         JTextField getGainFld = new JTextField(20);
         getGainFld.setEditable(false);
         getGainFld.setFont(font);
-        JPanel getGainForm = new JPanel();
-        getGainForm.setBorder(new EmptyBorder(10,0,0,0));
-        getGainForm.setLayout(new BoxLayout(getGainForm, BoxLayout.X_AXIS));
-        getGainForm.add(totalGainLbl);
-        getGainForm.add(getGainFld);
-        JPanel getGainFormWrapper = new JPanel();
-        getGainFormWrapper.setLayout(new BorderLayout());
-        getGainFormWrapper.add(getGainHeading, BorderLayout.NORTH);
-        getGainFormWrapper.add(getGainForm, BorderLayout.SOUTH);
-        getGainFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
-        getGainPanel.add(getGainFormWrapper);
-        getGainPanelWrapper.add(getGainPanel, BorderLayout.NORTH);
-        getGainPanelWrapper.add(getGainOutput, BorderLayout.CENTER);
+//        JPanel getGainForm = new JPanel();
+//        getGainForm.setBorder(new EmptyBorder(10,0,0,0));
+//        getGainForm.setLayout(new BoxLayout(getGainForm, BoxLayout.X_AXIS));
+//        getGainForm.add(totalGainLbl);
+//        getGainForm.add(getGainFld);
+//        JPanel getGainFormWrapper = new JPanel();
+//        getGainFormWrapper.setLayout(new BorderLayout());
+//        getGainFormWrapper.add(getGainHeading, BorderLayout.NORTH);
+//        getGainFormWrapper.add(getGainForm, BorderLayout.SOUTH);
+//        getGainFormWrapper.setBorder(new EmptyBorder(10,10,0,10));
+//        getGainPanel.add(getGainFormWrapper);
+//        getGainPanelWrapper.add(getGainPanel, BorderLayout.NORTH);
+//        getGainPanelWrapper.add(getGainOutput, BorderLayout.CENTER);
 
         JPanel searchPanelWrapper = new JPanel();
         searchPanelWrapper.setLayout(new BorderLayout());
@@ -495,126 +493,126 @@ public class MainGUI extends JFrame {
             }
         });
         
-        sellBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                String symbol = sellSymbolFld.getText();
-                int quantity;
-                double price;
-                try {
-                    price = Double.parseDouble(sellPriceFld.getText());
-                    quantity = Integer.parseInt(sellQuantityFld.getText());
-                }
-                catch (NumberFormatException e) {
-                    sellMessageArea.setText("Input Error: NumberFormatException");
-                    return;
-                }
-                int result = Stock_Management.portfolio.sellInvestment(symbol, quantity, price, sellMessageArea);
-                if (result != Stock_Management.SUCCESS)
-                    sellMessageArea.setText(Stock_Management.getError(result));
-                 else {
-                    sellSymbolFld.setText("");
-                    sellQuantityFld.setText("");
-                    sellPriceFld.setText("");
-                }
-            }
-        });
+//        sellBtn.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                String symbol = sellSymbolFld.getText();
+//                int quantity;
+//                double price;
+//                try {
+//                    price = Double.parseDouble(sellPriceFld.getText());
+//                    quantity = Integer.parseInt(sellQuantityFld.getText());
+//                }
+//                catch (NumberFormatException e) {
+//                    sellMessageArea.setText("Input Error: NumberFormatException");
+//                    return;
+//                }
+//                int result = Stock_Management.portfolio.sellInvestment(symbol, quantity, price, sellMessageArea);
+//                if (result != Stock_Management.SUCCESS)
+//                    sellMessageArea.setText(Stock_Management.getError(result));
+//                 else {
+//                    sellSymbolFld.setText("");
+//                    sellQuantityFld.setText("");
+//                    sellPriceFld.setText("");
+//                }
+//            }
+//        });
         
-        resetSellBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                sellSymbolFld.setText("");
-                sellQuantityFld.setText("");
-                sellPriceFld.setText("");
-            }
-        });
+//        resetSellBtn.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                sellSymbolFld.setText("");
+//                sellQuantityFld.setText("");
+//                sellPriceFld.setText("");
+//            }
+//        });
         
-        nextButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                ArrayList investmentList = Stock_Management.portfolio.getInvestmentList();
-                if (investmentList.isEmpty())
-                    return;
-                if (index + 1 > investmentList.size()-1)
-                    return;
-                index++;
-                Investment_Type i = Stock_Management.portfolio.getInvestmentList().get(index);
-                updateSymbolFld.setText(i.getSymbol());
-                updateNameFld.setText(i.getName());
-                updatePriceFld.setText("" + i.getPrice());
-            }
-        });
+//        nextButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                ArrayList investmentList = Stock_Management.portfolio.getInvestmentList();
+//                if (investmentList.isEmpty())
+//                    return;
+//                if (index + 1 > investmentList.size()-1)
+//                    return;
+//                index++;
+//                Investment_Type i = Stock_Management.portfolio.getInvestmentList().get(index);
+//                updateSymbolFld.setText(i.getSymbol());
+//                updateNameFld.setText(i.getName());
+//                updatePriceFld.setText("" + i.getPrice());
+//            }
+//        });
+//        
+//        prevButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                ArrayList investmentList = Stock_Management.portfolio.getInvestmentList();
+//                if (investmentList.isEmpty())
+//                    return;
+//                if (index == 0)
+//                    return;
+//                index--;
+//                Investment_Type i = Stock_Management.portfolio.getInvestmentList().get(index);
+//                updateSymbolFld.setText(i.getSymbol());
+//                updateNameFld.setText(i.getName());
+//                updatePriceFld.setText("" + i.getPrice());
+//            }
+//        });
+//        
+//        updateSaveButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                String symbol = updateSymbolFld.getText();
+//                double price;
+//                try {
+//                    price = Double.parseDouble(updatePriceFld.getText());
+//                    int result = Stock_Management.portfolio.updatePrice(symbol, price);
+//                    if (result != Stock_Management.SUCCESS)
+//                        updateMessageArea.setText(Stock_Management.getError(result));
+//                    else
+//                        updateMessageArea.setText("Successfully updated price for " + symbol);
+//                }
+//                catch (NumberFormatException ex) {
+//                    updateMessageArea.setText("Input Error: NumberFormatException");
+//                }
+//            }
+//        });
         
-        prevButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                ArrayList investmentList = Stock_Management.portfolio.getInvestmentList();
-                if (investmentList.isEmpty())
-                    return;
-                if (index == 0)
-                    return;
-                index--;
-                Investment_Type i = Stock_Management.portfolio.getInvestmentList().get(index);
-                updateSymbolFld.setText(i.getSymbol());
-                updateNameFld.setText(i.getName());
-                updatePriceFld.setText("" + i.getPrice());
-            }
-        });
+//        resetSearchBtn.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                searchHighPriceFld.setText("");
+//                searchLowPriceFld.setText("");
+//                searchSymbolFld.setText("");
+//                searchNameFld.setText("");
+//            }
+//        });
         
-        updateSaveButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                String symbol = updateSymbolFld.getText();
-                double price;
-                try {
-                    price = Double.parseDouble(updatePriceFld.getText());
-                    int result = Stock_Management.portfolio.updatePrice(symbol, price);
-                    if (result != Stock_Management.SUCCESS)
-                        updateMessageArea.setText(Stock_Management.getError(result));
-                    else
-                        updateMessageArea.setText("Successfully updated price for " + symbol);
-                }
-                catch (NumberFormatException ex) {
-                    updateMessageArea.setText("Input Error: NumberFormatException");
-                }
-            }
-        });
-        
-        resetSearchBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                searchHighPriceFld.setText("");
-                searchLowPriceFld.setText("");
-                searchSymbolFld.setText("");
-                searchNameFld.setText("");
-            }
-        });
-        
-        searchBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                double highPrice;
-                double lowPrice;
-                try {
-                    if (searchHighPriceFld.getText().isEmpty())
-                        highPrice = 0;
-                    else
-                        highPrice = Double.parseDouble(searchHighPriceFld.getText());
-                    if (searchLowPriceFld.getText().isEmpty())
-                        lowPrice = 0;
-                    else
-                        lowPrice = Double.parseDouble(searchLowPriceFld.getText());
-                    String[] keywords = searchNameFld.getText().toLowerCase().split(" ");
-                    if (searchNameFld.getText().isEmpty())
-                        keywords = new String[0];
-                    String symbol = searchSymbolFld.getText();
-                    Stock_Management.portfolio.search(symbol, keywords, lowPrice, highPrice, searchOutputArea);
-                }
-                catch (NumberFormatException ex) {
-                    searchOutputArea.setText("Input Error: NumberFormatException");
-                }
-            }
-        });
+//        searchBtn.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                double highPrice;
+//                double lowPrice;
+//                try {
+//                    if (searchHighPriceFld.getText().isEmpty())
+//                        highPrice = 0;
+//                    else
+//                        highPrice = Double.parseDouble(searchHighPriceFld.getText());
+//                    if (searchLowPriceFld.getText().isEmpty())
+//                        lowPrice = 0;
+//                    else
+//                        lowPrice = Double.parseDouble(searchLowPriceFld.getText());
+//                    String[] keywords = searchNameFld.getText().toLowerCase().split(" ");
+//                    if (searchNameFld.getText().isEmpty())
+//                        keywords = new String[0];
+//                    String symbol = searchSymbolFld.getText();
+//                    Stock_Management.portfolio.search(symbol, keywords, lowPrice, highPrice, searchOutputArea);
+//                }
+//                catch (NumberFormatException ex) {
+//                    searchOutputArea.setText("Input Error: NumberFormatException");
+//                }
+//            }
+//        }); //Might not need
         
         saveAs.addActionListener(new ActionListener() {
             @Override
