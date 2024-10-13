@@ -164,7 +164,7 @@ public class MainGUI extends JFrame {
         
         
         
-        String imagePath = "C:\\Users\\Harsh\\OneDrive\\Desktop\\graph.jpg"; // Storing image path in a variable
+        String imagePath = "src\\main\\java\\Images\\graph.jpg"; // Storing image path in a variable //Modified by Rishi
         ImageIcon profileImageIcon = new ImageIcon(imagePath); 
         JLabel profileImageLabel = new JLabel(profileImageIcon);  // Add image to a label
         profileResults.add(profileImageLabel, BorderLayout.CENTER); //RISHI+HARSH ADDED
